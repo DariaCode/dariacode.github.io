@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev
+
+Updated: 01/27/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+------------------------------------------------------- */
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* background style */
+html {
+  height: 100%;
+  background: green;
+}
+/*# sourceMappingURL=main.css.map */
