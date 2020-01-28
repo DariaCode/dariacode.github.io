@@ -4,18 +4,89 @@ Stylesheet for www.dariacode.dev
 Updated: 01/27/2020
 Author: Daria Vodzinskaia
 Website: www.dariacode.dev
-------------------------------------------------------- */
+-------------------------------------------------------  */
 
-/* Base reset */
-* {
-    margin: 0;
-    padding: 0;
-  }
+/* base reset */
 
 
 /* background style */
-
 html {
-	height: 100%;
-    background: green;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
 }
+
+@function multiple-box-shadow ($n) {
+  $value: "#{random(2000)}px #{random(2000)}px #FFF";
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+  }
+@return unquote($value);
+}
+
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-large:  multiple-box-shadow(100);
+$stars-size-sm: 1px;
+$stars-size-md: 2px;
+$stars-size-lg: 3px;
+
+.stars-small{
+  width: $stars-size-sm;
+  height: $stars-size-sm;
+  background:transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;
+  &:after{
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: $stars-size-sm;
+    height: $stars-size-sm;
+    background: transparent;
+    box-shadow: $shadows-small;
+    }
+}
+
+.stars-medium{
+  width: $stars-size-md;
+  height: $stars-size-md;
+  background:transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  &:after{
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: $stars-size-md;
+    height: $stars-size-md;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    }
+}
+
+.stars-large{
+  width: $stars-size-lg;
+  height: $stars-size-lg;
+  background:transparent;
+  box-shadow: $shadows-large;
+  animation: animStar 150s linear infinite;
+  &:after{
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    width: $stars-size-lg;
+    height: $stars-size-lg;
+    background: transparent;
+    box-shadow: $shadows-large;
+    }
+}
+/* animation function */
+@keyframes animStar {
+  from	{
+    transform: translateY(0px);
+  }
+  to		{
+    transform: translateY(-2000px);
+  }
+};
