@@ -6,14 +6,68 @@ Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
 
-/* base reset */
+$spaceColor1: #1b2735;
+$spaceColor2: #090a0f;
+$aboutColour: #8C6BC6;
+$projectsColour: #538FF8;
+$navbarColour: rgba(9, 10, 15, 0.95);
+$whiteColor: rgb(221, 221, 221);
+$greenColor: #85e89d;
+$pupleColor: #b392f0;
+$blueColor: #79b8ff;
+$orangeColor: #ffab70;
 
+
+
+
+
+/* base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*media queries breakpoints for responsive design */
+@mixin for-size($range) {
+  $phone-upper-boundary: 600px;
+  // Medium devices (tablets, 900px and up)
+  $tablet-portrait-upper-boundary: 900px;
+  // Large devices (desktops, 1200px and up)
+  $tablet-landscape-upper-boundary: 1200px;
+  // Extra large devices (large desktops, 1800px and up)
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) { @content; }
+  } @else if $range == tablet-portrait-up {
+    @media (min-width: $phone-upper-boundary) { @content; }
+  } @else if $range == tablet-landscape-up {
+    @media (min-width: $tablet-portrait-upper-boundary) { @content; }
+  } @else if $range == desktop-up {
+    @media (min-width: $tablet-landscape-upper-boundary) { @content; }
+  } @else if $range == big-desktop-up {
+    @media (min-width: $desktop-upper-boundary) { @content; }
+  }
+}
 
 /* background style */
 html {
   height: 100%;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
+  background: radial-gradient(/*ellipse at bottom,*/ $spaceColor1 0%, $spaceColor2 100%);
+  font-family: 'Fira Mono', monospace;
+  font-size: 8px; // phone only
+  @include for-size(tablet-portrait-up) { // 600px and up
+    font-size: 10px;
+  }
+  @include for-size(tablet-landscape-up) { //tablets, 900px and up
+    font-size: 12px;
+  }
+  @include for-size(desktop-up) { //desktops, 1200px and up
+    font-size: 16px;
+  }
+  @include for-size(big-desktop-up) { //large desktops, 1800px and up
+    font-size: 18px;
+  }
 }
 
 @function multiple-box-shadow ($n) {
@@ -90,3 +144,103 @@ $stars-size-lg: 3px;
     transform: translateY(-2000px);
   }
 };
+
+#welcome-section{
+  height: 400px;
+}
+
+#about-section {
+  height: 400px;
+  background: $aboutColour;
+  clip-path: polygon(0 0,100% 20%,100% 100%,0 80%);
+  box-shadow: 1px 1px 26px 43px rgba(255,247,255,1); // CHECK IT!
+  text-align: center;
+  color: White;
+  font-size: 10em;
+};
+
+#projects-section{
+  height: 400px;
+  background: $projectsColour;
+  margin-top: -50px;
+  clip-path: polygon(0 20%,100% 0,100% 80%,0 100%);
+  box-shadow: 1px 1px 26px 43px rgba(0,0,0,0.86); // CHECK IT!
+  text-align: center;
+  color: white;
+  font-size: 10em;
+};
+
+/* navigation bar */
+
+.navbar{
+  margin: 0;
+  padding: 0;
+  width: 6.4%;
+  @include for-size(desktop-up) { //desktops, 1200px and up
+    width: 5.8%;
+  }
+  background-color: $navbarColour;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  a {
+    display: block;
+    color: $whiteColor;
+    padding: 14px;
+    text-decoration: none;
+    &:hover:not(.active) {
+      color: $blueColor;
+      .far {
+        display: none;
+      }
+      span {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    i {
+      font-size: 2.2em;
+    }
+    span {
+      display: none;
+      }
+    }
+    #nav-logo{
+      font-size: 3em;
+    }
+    #nav-links a i{
+      font-size: 2em;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    div a {
+      float: left;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar a {
+    text-align: center;
+    float: none;
+  }
+  #nav-links{
+    display: none;
+  }
+}
+
+
