@@ -193,6 +193,10 @@ $stars-size-lg: 3px;
     color: $whiteColor;
     padding: 14px;
     text-decoration: none;
+    .current{
+      background: white;
+      color:red;
+    }
     &:hover:not(.active) {
       color: $blueColor;
       .far {
