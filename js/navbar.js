@@ -6,8 +6,7 @@ Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
 
-
-let mainNavLinks = document.querySelectorAll("nav div a");
+let mainNavLinks = document.getElementById("nav-main").querySelectorAll(".nav-item");
 let mainSection = document.querySelectorAll("section");
 let lastId;
 let cur = [];
@@ -19,9 +18,9 @@ window.addEventListener("scroll", event =>{
         let section = document.querySelector(link.hash);
         
         if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-            link.classList.add("current");
+            link.classList.add("active");
         } else {
-            link.classList.remove("current");
+            link.classList.remove("active");
         }
     });
 });

@@ -1,21 +1,21 @@
 /* ----------------------------------------------------
 Stylesheet for www.dariacode.dev
 
-Updated: 01/27/2020
+Updated: 01/29/2020
 Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
 
-$spaceColor1: #1b2735;
-$spaceColor2: #090a0f;
-$aboutColour: #8C6BC6;
-$projectsColour: #538FF8;
-$navbarColour: rgba(9, 10, 15, 0.95);
+$spaceColor1: #253250;
+$spaceColor2: #190F26; 
+$aboutColour: #AE8DFF;// #e52e71;
+$projectsColour: #00CEE5;
+$navbarColour: rgba(25, 15, 38, 0.95);
 $whiteColor: rgb(221, 221, 221);
-$greenColor: #85e89d;
-$pupleColor: #b392f0;
-$blueColor: #79b8ff;
-$orangeColor: #ffab70;
+$greenColor: #00C65F;
+$pupleColor: #FF45EE;
+$blueColor: #00CEE5;
+$orangeColor: #FF8A00;
 
 
 
@@ -25,6 +25,7 @@ $orangeColor: #ffab70;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /*media queries breakpoints for responsive design */
@@ -50,9 +51,9 @@ $orangeColor: #ffab70;
   }
 }
 
-/* background style */
+
 html {
-  height: 100%;
+ // height: 100%;
   background: radial-gradient(/*ellipse at bottom,*/ $spaceColor1 0%, $spaceColor2 100%);
   font-family: 'Fira Mono', monospace;
   font-size: 8px; // phone only
@@ -70,6 +71,7 @@ html {
   }
 }
 
+/* background style */
 @function multiple-box-shadow ($n) {
   $value: "#{random(2000)}px #{random(2000)}px #FFF";
   @for $i from 2 through $n {
@@ -91,6 +93,7 @@ $stars-size-lg: 3px;
   background:transparent;
   box-shadow: $shadows-small;
   animation: animStar 50s linear infinite;
+ // z-index: -1;
   &:after{
     content: " ";
     position: absolute;
@@ -108,6 +111,7 @@ $stars-size-lg: 3px;
   background:transparent;
   box-shadow: $shadows-medium;
   animation: animStar 100s linear infinite;
+ // z-index: -1;
   &:after{
     content: " ";
     position: absolute;
@@ -125,6 +129,7 @@ $stars-size-lg: 3px;
   background:transparent;
   box-shadow: $shadows-large;
   animation: animStar 150s linear infinite;
+  // z-index: -1;
   &:after{
     content: " ";
     position: absolute;
@@ -143,31 +148,6 @@ $stars-size-lg: 3px;
   to		{
     transform: translateY(-2000px);
   }
-};
-
-#welcome-section{
-  height: 400px;
-}
-
-#about-section {
-  height: 400px;
-  background: $aboutColour;
-  clip-path: polygon(0 0,100% 20%,100% 100%,0 80%);
-  box-shadow: 1px 1px 26px 43px rgba(255,247,255,1); // CHECK IT!
-  text-align: center;
-  color: White;
-  font-size: 10em;
-};
-
-#projects-section{
-  height: 400px;
-  background: $projectsColour;
-  margin-top: -50px;
-  clip-path: polygon(0 20%,100% 0,100% 80%,0 100%);
-  box-shadow: 1px 1px 26px 43px rgba(0,0,0,0.86); // CHECK IT!
-  text-align: center;
-  color: white;
-  font-size: 10em;
 };
 
 /* navigation bar */
@@ -193,10 +173,6 @@ $stars-size-lg: 3px;
     color: $whiteColor;
     padding: 14px;
     text-decoration: none;
-    .current{
-      background: white;
-      color:red;
-    }
     &:hover:not(.active) {
       color: $blueColor;
       .far {
@@ -209,13 +185,17 @@ $stars-size-lg: 3px;
         align-items: center;
       }
     }
+      // &:focus{
+      //  color: $blueColor;
+      //  border-bottom: 5px solid$blueColor;
+      //}
+  }
     i {
       font-size: 2.2em;
-    }
+      }
     span {
       display: none;
       }
-    }
     #nav-logo{
       font-size: 3em;
     }
@@ -223,7 +203,6 @@ $stars-size-lg: 3px;
       font-size: 2em;
     }
   }
-
 
 @media screen and (max-width: 768px) {
   .navbar {
@@ -247,4 +226,210 @@ $stars-size-lg: 3px;
   }
 }
 
+#welcome-section{
+  height: 100vh;
+  text-align: center;
+};
 
+#about-section {
+  height: 400px;
+  background: $aboutColour;
+  clip-path: polygon(0 0,100% 20%,100% 100%,0 80%);
+  box-shadow: 1px 1px 26px 43px rgba(255,247,255,1); // CHECK IT!
+  text-align: center;
+  color: White;
+  font-size: 10em;
+};
+
+#projects-section{
+  height: 400px;
+  background: $projectsColour;
+  margin-top: -50px;
+  clip-path: polygon(0 20%,100% 0,100% 80%,0 100%);
+  box-shadow: 1px 1px 26px 43px rgba(0,0,0,0.86); // CHECK IT!
+  text-align: center;
+  color: white;
+  font-size: 10em;
+};
+
+/* orbit system */
+
+$orbitItemSize: 1.8em;
+$map: (ring-0: 4, ring-1: 3, ring-2: 8, ring-3: 3);
+$lastRing: 3;
+
+.orbit {
+  float: left;
+  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.orbit-icon {
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  line-height: $orbitItemSize;
+  font-size: 1.2em;
+  border-radius: 50%;
+  background: #ccc;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+.orbit-wrap {
+  height: 40em;
+  list-style: none;
+  font-size: 1.3em;
+  > li {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &:hover {
+      ul {
+        border-width: 2px;
+        border-color: #fff;
+      }
+      ~ li ul {
+        border-color: rgba(255, 255, 255, 0.2);
+        li {
+          opacity: 0.4;          
+        }
+      }
+    }
+    
+  }
+}
+
+%ring {
+  border: solid 1px $blueColor;
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+}
+
+%orbiting-object {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $orbitItemSize;
+  height: $orbitItemSize;
+  margin: -$orbitItemSize / 2;
+}
+
+ul[class^=ring] {
+  @extend %ring;
+  transition: all 300ms ease-in-out;
+  li {
+    @extend %orbiting-object;
+    transition: all 300ms ease-in-out;
+  }
+}
+
+@mixin orbit-item($numItems, $numRing) {
+  @for $s from 1 through $numItems {  
+    /* spread items over the ring */
+    $deg: 380deg / $numItems;
+    
+    .ring-#{$numRing} > *:nth-of-type(#{$s}) {
+      transform: rotate($s * $deg) translate(15em - ($numRing * 2.5)) rotate(-$s * $deg);
+    }
+  }
+}
+
+/* animations */
+@keyframes clockwiseRotate {
+  from {
+      transform: rotate(0deg)
+  }
+  to {
+      transform: rotate(360deg)
+  }
+}
+
+@keyframes counterClockwiseRotate {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+
+/* render rings */
+@for $i from 0 through $lastRing {  
+  .ring-#{$i} {
+    /* decrease each ring in size */
+    width: 30em - ($i * 5);
+    height: 30em - ($i * 5);
+    animation: clockwiseRotate 35s - ($i * 5) linear infinite;
+    
+    i {
+      animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
+    }
+  }
+  
+  @include orbit-item(map-get($map, ring-#{$i}), $i);
+}
+
+/* center */
+.orbit-center {
+  z-index: 5;
+  font-size: 0.9em;
+  width: 11em;
+  height: 11em;
+  line-height: 2em;
+  text-align: center;
+  background: #FE5C5C;
+  border-radius: 50%;
+  
+  &:hover .orbit-center__icon {
+    transform: rotateZ(0deg);
+  }
+}
+.orbit-center__icon {
+  font-size: 2em;
+  transform: rotateZ(-360deg);
+  transition: all 300ms ease-in-out;
+}
+.orbit-wrap > li.orbit-center:hover ~ li > ul {
+  width: 0;
+  height: 0;
+  * {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* icons */
+$icons : (
+  ('heart', #b71c1c, white),
+  ('coffee', #4CAF50, #CDDC39),
+  ('safari', white, darkslateblue),
+  ('firefox', #1565c0, #ff8f00),
+  ('chrome', #fbc02d, #ef6c00),
+  ('edge', #03a9f4, white),
+  ('android', snow, limegreen),
+  ('apple', #444, white),
+  ('linux', white, #222),
+  ('windows', white, #03a9f4),
+  ('terminal', #222, #fff),
+  ('html5', white, #e65100),
+  ('css3', white, #2196f3),
+  ('git', #222, white),
+  ('free-code-camp', green, white),
+  ('meetup', red, white),
+  ('podcast', red, white),
+  ('codepen', #333, white)
+);
+
+@each $icon in $icons {
+  .fa-#{nth($icon, 1)} {
+    background: nth($icon, 2);
+    color: nth($icon, 3);
+  }
+}
