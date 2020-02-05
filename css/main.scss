@@ -8,6 +8,11 @@ Website: www.dariacode.dev
 $spaceColor1: #34143F;
 $spaceColor2: #010A1F; 
 $navbarColour:rgba(1, 10, 31, 0.95);
+$darkOrange: rgb(225, 77, 29);
+$orange: rgb(247, 144, 41);
+$yellow: rgb(252, 209, 45);
+$blueEyes: rgb(35, 149, 211);
+$purple: rgb(135, 15, 144);
 
 *,
 *:before,
@@ -75,6 +80,7 @@ html {
   $stars-size-lg: 3px;
   
   .stars-small{
+    z-index: -1;
     width: $stars-size-sm;
     height: $stars-size-sm;
     background:transparent;
@@ -92,6 +98,7 @@ html {
   }
   
   .stars-medium{
+    z-index: -1;
     width: $stars-size-md;
     height: $stars-size-md;
     background:transparent;
@@ -153,13 +160,13 @@ html {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    overflow: hidden;
     a {
       display: block;
       color: white;
-      padding: 14px;
       text-decoration: none;
       &:hover:not(.active) {
-        color: #FE3657;
+        color: $yellow;// #FE3657;
         .far {
           display: none;
         }
@@ -179,13 +186,18 @@ html {
         }
     #nav-logo{
         font-size: 3em;
+        padding: 0.3em;
       }
+    #nav-main a {
+      padding: 14px;
+    }  
     #nav-links a i{
-        font-size: 2em;
+        font-size: 1.2em;
+        padding: 14px;
       }
     };
 nav div a.current {
-    color: #FE3657;
+    color: $yellow;//#FE3657;
     } 
     
  @media screen and (max-width: 768px) {
@@ -196,6 +208,15 @@ nav div a.current {
       justify-content: space-between;
       div a {
         float: left;
+      }
+      #nav-main {
+        padding: 1em 1em 1em 10em;
+      }
+      #nav-links{
+        padding: 1em;
+        a i {
+          font-size: 2em;
+        }
       }
     }
   };
@@ -209,38 +230,55 @@ nav div a.current {
       display: none;
     }
   };
+#nav-logo img{
+  height: 1.63em;
+  width: 1.18em;
+};
 
 
 #welcome-section{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    @include for-size(tablet-landscape-up) { //tablets, 900px and up
+    @include for-size(desktop-up) { //desktops, 1200px and up
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.8fr 1.2fr;
       }
     .greeting{
         display: block;
         color: white;
-        font-size: 2.5em;
-        padding: 15vh;
+        font-size: 2.4em;
+        padding: 15vh 0 0 10vh;
+        height: 40vh;
+        @include for-size(desktop-up) { //desktops, 1200px and up
+          height: auto;
+          width: 40vw;
+          padding: 30vh 0 0 17vh;
+        }
         :hover{
-            color: blueviolet;
+            color: $blueEyes;
+        }
+        img{
+          height: 1.63em;
+          width: 1.18em;
+        }
+        h3 {
+          line-height: 1.5em;
         }
     }  
 };  
 
 /* orbit system */
 
-$orbitItemSize: 1.8em;
-$map: (ring-0: 4, ring-1: 4, ring-2: 5, ring-3: 3);
-$lastRing: 3;
+$orbitItemSize: 1.6em;
+$map: (ring-0: 6, ring-1: 5, ring-2: 5);
+$lastRing: 2;
 
 .orbit-icon {
   width: $orbitItemSize;
   height: $orbitItemSize;
   line-height: $orbitItemSize;
-  font-size: 1.2em;
+  font-size: 1.4em;
   border-radius: 50%;
   background: #ccc;
   color: #fff;
@@ -252,12 +290,13 @@ $lastRing: 3;
 .orbit-wrap {
   height: 40em;
   list-style: none;
-  font-size: 1.3em;
-  > li {
+  font-size: 1.2em;
+  position: relative;
+    > li{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
     &:hover {
       ul {
         border-width: 2px;
@@ -267,15 +306,15 @@ $lastRing: 3;
         border-color: rgba(255, 255, 255, 0.2);
         li {
           opacity: 0.4;          
-        }
-      }
+        } 
+      } 
     }
     
   }
 }
 
 %ring {
-  border: solid 1px blueviolet;
+  border: solid 1px $blueEyes;
   position: relative;
   padding: 0;
   border-radius: 50%;
@@ -308,7 +347,7 @@ ul[class^=ring] {
     $deg: 380deg / $numItems;
     
     .ring-#{$numRing} > *:nth-of-type(#{$s}) {
-      transform: rotate($s * $deg) translate(10em - ($numRing * 2.5)) rotate(-$s * $deg);
+      transform: rotate($s * $deg) translate(15em - ($numRing * 4)) rotate(-$s * $deg);
     }
   }
 }
@@ -337,8 +376,8 @@ ul[class^=ring] {
 @for $i from 0 through $lastRing {  
   .ring-#{$i} {
     /* decrease each ring in size */
-    width: 20em - ($i * 5);
-    height: 20em - ($i * 5);
+    width: 30em - ($i * 8);
+    height: 30em - ($i * 8);
     animation: clockwiseRotate 35s - ($i * 5) linear infinite;
     
     i {
@@ -374,14 +413,10 @@ ul[class^=ring] {
 
 /* icons */
 $icons : (
-  ('mug-hot', #222, white),
-  ('heart', white, red),
-  ('laptop-code', white, darkslateblue),
   ('js-square', #323330, #F0DB4F),
   ('react', white, #61dbfb),
   ('npm', white, #CC3534),
   ('node', #303030, #68A063),
-  ('python', #4B8BBE, #FFD43B),
   ('css3-alt', white, #2196f3),
   ('html5', white, #e65100),
   ('bootstrap', white, #553C7B),
@@ -401,21 +436,38 @@ $icons : (
 
 
 #about-section {
-    background: yellow;
-    .about-section-background{
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  background: $purple;
+  .about-section-background{
         display: flex;
         flex-direction: column;
-        background: wheat;
+        background: rgb(70, 28, 94);
+        padding: 0 0 0 10vw;
+        @include for-size(desktop-up) { //desktops, 1200px and up
+            padding: 0 0 0 17vh;
+          }
         @include for-size(tablet-landscape-up) { //tablets, 900px and up
             display: grid;
             grid-template-columns: 1fr 1fr;
           }
-    }
-  };
+        .photo{
+          padding: 3vh;
+          img {
+            height: 70vh;
+            border: 12px outset #3FC72C;
+            border-radius: 40px 40px 40px 40px;
+          }  
+        }
+  }
+};
 
 #projects-section{
-    background: pink;
-    height: 1000px;
+  position: relative;
+  z-index: 100;
+  background: white;
+  height: 1000px;
     .projects{
         display: flex;
         flex-wrap: wrap;
@@ -424,9 +476,12 @@ $icons : (
   
 #contacts-section{
     height: 80vh;
-    background: grey;
+    text-align: center;
+    color: white;
 };
 
 footer{
-    background: blueviolet;
+    text-align: center;
+    color: white;
+    padding: 2em;
 }
