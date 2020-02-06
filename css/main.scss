@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 Stylesheet for www.dariacode.dev
 
-Updated: 01/29/2020
+Updated: 02/05/2020
 Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
@@ -302,14 +302,7 @@ $lastRing: 2;
         border-width: 2px;
         border-color: #fff;
       }
-      ~ li ul {
-        border-color: rgba(255, 255, 255, 0.2);
-        li {
-          opacity: 0.4;          
-        } 
-      } 
     }
-    
   }
 }
 
@@ -330,6 +323,10 @@ $lastRing: 2;
   width: $orbitItemSize;
   height: $orbitItemSize;
   margin: -$orbitItemSize / 2;
+  img{
+    width: 2em;
+    height: 2em;
+  }
 }
 
 ul[class^=ring] {
@@ -380,7 +377,7 @@ ul[class^=ring] {
     height: 30em - ($i * 8);
     animation: clockwiseRotate 35s - ($i * 5) linear infinite;
     
-    i {
+    i, img {
       animation: counterClockwiseRotate 35s - ($i * 5) linear infinite;
     }
   }
@@ -391,22 +388,18 @@ ul[class^=ring] {
 /* center */
 .orbit-center {
   z-index: 5;
-  font-size: 0.9em;
-  color: white;
-  width: 3em;
-  height: 3em;
-  line-height: 2em;
-  text-align: center;
-  background-image: radial-gradient(circle, #fcb045, #fd962e, #fe791e, #fe5618, #fd1d1d);
+  width: 9em;
+  height: 9em;
   box-shadow: 0px 0px 60px 40px rgba(255,255,255,0.1);
   border-radius: 50%;
-
-}
-.orbit-wrap > li.orbit-center:hover ~ li > ul {
-  width: 0;
-  height: 0;
-  * {
-    transform: translate(0, 0);
+  position: relative;
+  img {
+    width: 11em;
+    height: 11em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -434,16 +427,26 @@ $icons : (
   }
 }
 
+.bg {
+  width: 100%;
+  height: auto;
+  z-index: 101;
+  position: relative;
+}
+
+.bgd {
+  top: 5px;
+}
 
 #about-section {
   position: relative;
   z-index: 100;
   width: 100%;
-  background: $purple;
+  top: 5px;
   .about-section-background{
         display: flex;
         flex-direction: column;
-        background: rgb(70, 28, 94);
+        background: #AE87CC;
         padding: 0 0 0 10vw;
         @include for-size(desktop-up) { //desktops, 1200px and up
             padding: 0 0 0 17vh;
@@ -454,10 +457,13 @@ $icons : (
           }
         .photo{
           padding: 3vh;
+          text-align: center;
           img {
-            height: 70vh;
-            border: 12px outset #3FC72C;
-            border-radius: 40px 40px 40px 40px;
+            width: 25vw;
+            border-top: 7px double $purple;
+            border-radius: 0px 15px 0px 15px;
+            border-bottom: 7px double $purple;
+            box-shadow: -25px 8px 20px -8px rgba(0,0,0,0.65);
           }  
         }
   }
@@ -467,7 +473,7 @@ $icons : (
   position: relative;
   z-index: 100;
   background: white;
-  height: 1000px;
+  height: 500px;
     .projects{
         display: flex;
         flex-wrap: wrap;
