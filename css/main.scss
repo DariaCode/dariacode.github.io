@@ -447,18 +447,21 @@ $icons : (
   width: 10em;
   height: 2.5em;
   padding: 2px 0;
-  border: 4px outset $spaceColor1;
+  border: 3px outset $spaceColor1;
   border-radius: 3px 3px 3px 3px;
   text-decoration: none;
+  position: relative;
+  z-index: 101;
   &:hover{
     background: #AE87CC;
-    box-shadow: -25px 20px 30px -8px rgba(0,0,0,0.65);
+    box-shadow: -25px 10px 20px -8px rgba(0,0,0,0.65);
    // animation: bounce 2s ease-in-out forwards;
   }
   &:focus {
     outline:0;
   }
 }
+/*
 .shadow{
   display: block;
   width: 20%;
@@ -504,6 +507,7 @@ $icons : (
     opacity: 0;
   }
 }
+*/
 
 #about-section {
   position: relative;
@@ -522,7 +526,10 @@ $icons : (
             grid-template-columns: 0.8fr 1.2fr;
           }
         .photo{
-          padding: 3vw 4vh 3vw 8vh;
+          padding: 3vw 4vh 3vw 4vh;
+          @include for-size(tablet-landscape-up) { //tablets, 900px and up
+            padding: 3vw 4vh 3vw 8vh;
+          }
           text-align: center;
           img {
             width: 28vh;
@@ -571,10 +578,28 @@ $icons : (
   position: relative;
   z-index: 100;
   background: white;
-  height: 500px;
-    .projects{
-        display: flex;
-        flex-wrap: wrap;
+  //height: 500px;
+  font-size: 1.2em;
+  .title{
+    font-size: 2em;
+    padding: 0.6em;
+    text-align: center;
+    }
+  .projects{
+    position: relative;
+    display: block;
+    padding: 1em;
+    text-align: center;
+    @include for-size(desktop-up) { //desktops, 1200px and up
+      padding: 0 0 0 14vh;
+    }
+    .project{
+      display: inline-flex;
+      background: #2196f3;
+      height: 180px;
+      width: 180px;
+      margin: 0.4em;
+     }
     }
   };
   
@@ -582,6 +607,34 @@ $icons : (
     height: 80vh;
     text-align: center;
     color: white;
+    font-size: 1.2em;
+    .title{
+      font-size: 2em;
+      padding: 0.2em;
+      text-align: center;
+    }
+    .contact-links {
+      padding: 1em;
+      i{
+      font-size: 1.2em;
+      color: white;
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+    form{
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      input[type=text], textarea {
+        font-family: 'Fira Mono', monospace;
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px;
+        display: block;
+      }
+  }
 };
 
 footer{
