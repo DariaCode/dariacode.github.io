@@ -427,6 +427,7 @@ $icons : (
   }
 }
 
+/* background illustration */
 .bg {
   width: 100%;
   height: auto;
@@ -438,15 +439,24 @@ $icons : (
   top: 5px;
 }
 
+/* button */
+
 .button {
   font-family: 'Fira Mono', monospace;
-  width: 12em;
-  height: 4em;
-  padding: 4px 0;
-  box-shadow: 0 2px 0 $purple;
+  font-size: 1em;
+  width: 10em;
+  height: 2.5em;
+  padding: 2px 0;
+  border: 4px outset $spaceColor1;
+  border-radius: 3px 3px 3px 3px;
   text-decoration: none;
   &:hover{
-  animation: bounce 2s ease-in-out forwards;
+    background: #AE87CC;
+    box-shadow: -25px 20px 30px -8px rgba(0,0,0,0.65);
+   // animation: bounce 2s ease-in-out forwards;
+  }
+  &:focus {
+    outline:0;
   }
 }
 .shadow{
@@ -467,13 +477,13 @@ $icons : (
 @keyframes bounce {
   0%{
     transform: translateY(0px);
-    width: 12.5em;
-    height: 4.5em;
+    width: 9.5em;
+    height: 2.4em;
 }
   50%{
-    transform: translateY(-20px);
-    width: 13em;
-    height: 5em;
+    transform: translateY(-10px);
+    width: 10.5em;
+    height: 2.6em;
 }
 }
 
@@ -504,7 +514,6 @@ $icons : (
         display: flex;
         flex-direction: column;
         background: #AE87CC;
-        padding: 0 0 0 10vw;
         @include for-size(desktop-up) { //desktops, 1200px and up
             padding: 0 0 0 14vh;
           }
@@ -513,24 +522,27 @@ $icons : (
             grid-template-columns: 0.8fr 1.2fr;
           }
         .photo{
-          padding: 3vh;
+          padding: 3vw 4vh 3vw 8vh;
           text-align: center;
           img {
-            width: 25vw;
-            border-top: 7px double $purple;
-            border-radius: 0px 15px 0px 15px;
-            border-bottom: 7px double $purple;
-            box-shadow: -25px 8px 20px -8px rgba(0,0,0,0.65);
+            width: 28vh;
+            @include for-size(desktop-up) { //desktops, 1200px and up
+              width: 28vw;
+            }
+            border: 4px outset $spaceColor1;
+            border-radius: 3px 3px 3px 3px;
+            box-shadow: -25px 20px 30px -8px rgba(0,0,0,0.65);
           }  
-        }
-        .title{
-          font-size: 2em;
-          padding: 0.2em;
         }
         #about-second{
           font-size: 1.2em;
+          padding: 2vw 5vh 2vw 4vh;
           p {
-            padding: 0.4em;
+            padding: 1em 0.4em;
+          }
+          .title{
+            font-size: 2em;
+            padding: 0.2em;
           }
           .location{
             padding: 0.4em;
@@ -539,9 +551,18 @@ $icons : (
               padding-left: 1em;
             }
           }
-            ul{
-              padding-left: 1.4em;
+          ul{
+              display: grid;
+              grid-template-columns: repeat(2, minmax(120px, 250px));
+              list-style-position: inside;
+              li{
+                padding: 0px 10px;
+              }
             }
+          .btn-container{
+            padding: 2em 0.5em 30px 0.5em;
+
+          }
         }
   }
 };
