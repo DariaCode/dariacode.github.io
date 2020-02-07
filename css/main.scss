@@ -438,6 +438,63 @@ $icons : (
   top: 5px;
 }
 
+.button {
+  font-family: 'Fira Mono', monospace;
+  width: 12em;
+  height: 4em;
+  padding: 4px 0;
+  box-shadow: 0 2px 0 $purple;
+  text-decoration: none;
+  &:hover{
+  animation: bounce 2s ease-in-out forwards;
+  }
+}
+.shadow{
+  display: block;
+  width: 20%;
+  height: 0px;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: $purple;
+  border-radius: 50%;
+  animation: bounce-shadow 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+
+}
+@keyframes bounce {
+  0%{
+    transform: translateY(0px);
+    width: 12.5em;
+    height: 4.5em;
+}
+  50%{
+    transform: translateY(-20px);
+    width: 13em;
+    height: 5em;
+}
+}
+
+@keyframes bounce-shadow{
+  0%{
+    width: 1%;
+    height: 2px;
+    opacity: 0.1;
+}
+  50%{
+    width: 90%;
+    height: 6px;
+    opacity: 0.3;
+  }
+  100%{
+    width: 1%;
+    height: 0px;
+    opacity: 0;
+  }
+}
+
 #about-section {
   position: relative;
   z-index: 100;
@@ -449,11 +506,11 @@ $icons : (
         background: #AE87CC;
         padding: 0 0 0 10vw;
         @include for-size(desktop-up) { //desktops, 1200px and up
-            padding: 0 0 0 17vh;
+            padding: 0 0 0 14vh;
           }
         @include for-size(tablet-landscape-up) { //tablets, 900px and up
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 0.8fr 1.2fr;
           }
         .photo{
           padding: 3vh;
@@ -465,6 +522,26 @@ $icons : (
             border-bottom: 7px double $purple;
             box-shadow: -25px 8px 20px -8px rgba(0,0,0,0.65);
           }  
+        }
+        .title{
+          font-size: 2em;
+          padding: 0.2em;
+        }
+        #about-second{
+          font-size: 1.2em;
+          p {
+            padding: 0.4em;
+          }
+          .location{
+            padding: 0.4em;
+            p {
+              display: inline;
+              padding-left: 1em;
+            }
+          }
+            ul{
+              padding-left: 1.4em;
+            }
         }
   }
 };
