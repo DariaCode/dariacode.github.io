@@ -65,9 +65,9 @@ html {
 
 /* background style */
 @function multiple-box-shadow ($n) {
-    $value: "#{random(2000)}px #{random(2000)}px #FFF";
+    $value: "#{random(3000)}px #{random(3000)}px #FFF";
     @for $i from 2 through $n {
-      $value: "#{$value} , #{random(2000)}px #{random(2000)}px #FFF";
+      $value: "#{$value} , #{random(3000)}px #{random(3000)}px #FFF";
     }
   @return unquote($value);
   }
@@ -89,7 +89,7 @@ html {
     &:after{
       content: " ";
       position: absolute;
-      top: 2000px;
+      top: 3000px;
       width: $stars-size-sm;
       height: $stars-size-sm;
       background: transparent;
@@ -107,7 +107,7 @@ html {
     &:after{
       content: " ";
       position: absolute;
-      top: 2000px;
+      top: 3000px;
       width: $stars-size-md;
       height: $stars-size-md;
       background: transparent;
@@ -124,7 +124,7 @@ html {
     &:after{
       content: " ";
       position: absolute;
-      top: 2000px;
+      top: 3000px;
       width: $stars-size-lg;
       height: $stars-size-lg;
       background: transparent;
@@ -137,7 +137,7 @@ html {
       transform: translateY(0px);
     }
     to		{
-      transform: translateY(-2000px);
+      transform: translateY(-3000px);
     }
   };
 
@@ -590,24 +590,45 @@ $icons : (
     display: block;
     padding: 1em;
     text-align: center;
-    @include for-size(desktop-up) { //desktops, 1200px and up
-      padding: 0 0 0 14vh;
+    padding: 4em;
+    @include for-size(tablet-landscape-up) { //tablets, 900px and up
+      padding: 1em 2em 1em 8vw;
     }
     .project{
       display: inline-flex;
       background: #2196f3;
       height: 180px;
-      width: 180px;
-      margin: 0.4em;
+      width: 31%;
+      margin: 0.8em 0.4em;
+      @media screen and (max-width: 768px) {
+        width: 47%;
+      }
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+      .card{
+        display: none;
+      }
+      &:hover{
+        background: beige;
+        .card{
+          display: block;
+          background: #61dbfb;
+        }
+      }
      }
     }
   };
   
 #contacts-section{
-    height: 80vh;
+    //height: 80vh;
     text-align: center;
     color: white;
     font-size: 1.2em;
+    padding: 0 0 35vh 0;
+    @include for-size(tablet-landscape-up) { //tablets, 900px and up
+      padding: 1em 2em 25vh 4vw;
+    }
     .title{
       font-size: 2em;
       padding: 0.2em;
@@ -631,8 +652,12 @@ $icons : (
         font-family: 'Fira Mono', monospace;
         font-size: 1em;
         padding: 10px;
-        margin: 10px;
+        margin: 20px;
         display: block;
+        width: 65vw;
+        @include for-size(tablet-landscape-up) { //tablets, 900px and up
+          width: 45vw;
+        }
       }
   }
 };
@@ -641,4 +666,32 @@ footer{
     text-align: center;
     color: white;
     padding: 2em;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
 }
