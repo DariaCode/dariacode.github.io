@@ -639,6 +639,7 @@ $icons : (
       i{
       font-size: 1.2em;
       color: white;
+      padding: 0.8em;
       &:hover{
         color: $yellow;
       }
@@ -668,30 +669,3 @@ footer{
     padding: 2em;
 }
 
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-}
