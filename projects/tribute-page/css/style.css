@@ -1,0 +1,192 @@
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev/ tribute page
+
+Updated: 02/05/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+footer,
+#main {
+  background: -webkit-gradient(linear, left bottom, left top, from(black), color-stop(black), color-stop(#1e0121), color-stop(black), to(black));
+  background: linear-gradient(0deg, black, black, #1e0121, black, black);
+  color: #fff5d9;
+  text-align: justify;
+  font-family: fantasy;
+}
+
+h2 {
+  color: rgba(245, 188, 19, 0.77);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0.7em;
+  text-shadow: 1px 0.5px rgba(209, 14, 154, 0.99);
+}
+
+#imgtitle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 25%;
+  max-width: 70%;
+}
+
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 25%;
+  max-width: 35%;
+}
+
+#imgfooter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  min-width: 20%;
+  max-width: 40%;
+}
+
+nav {
+  background: black;
+  width: 100%;
+  margin: 20px 0;
+  border: 2px solid rgba(245, 188, 19, 0.37);
+}
+
+nav button {
+  color: rgba(245, 188, 19, 0.77);
+}
+
+nav button span {
+  padding: 5px;
+}
+
+nav button:focus {
+  outline: none;
+}
+
+nav .show {
+  padding-left: 1.5em;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  overflow: hidden;
+  background-color: black;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+nav ul li {
+  padding: 0px 15px;
+}
+
+nav ul li a {
+  display: block;
+  color: rgba(245, 188, 19, 0.77);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: white;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 15px #fff, 0 0 10px #e60073, 0 0 15px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 15px #ff4da6, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 15px #fff, 0 0 10px #e60073, 0 0 15px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 15px #ff4da6, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+  }
+}
+
+#main {
+  padding: 50px;
+  margin: auto;
+}
+
+#spellDisplay {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.button-spell {
+  background-color: #1e0121;
+  border-color: rgba(245, 188, 19, 0.77);
+  color: rgba(245, 188, 19, 0.77);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  margin: auto;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button-spell:hover {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.button-spell:focus {
+  outline: none;
+}
+
+footer {
+  background: black;
+  padding: 2em;
+  text-align: center;
+}
+
+footer a {
+  color: rgba(245, 188, 19, 0.77);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+          animation: glow 1s ease-in-out infinite alternate;
+}
+
+footer .footer {
+  padding: 0.7em 0;
+  margin: 0;
+}
+
+footer i {
+  font-size: 2em;
+  padding: 3em 0.7em 1em 0.7em;
+}
+/*# sourceMappingURL=style.css.map */

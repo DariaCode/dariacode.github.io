@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <meta name="Description" content="Author: Daria Vodzinskaia,personal website">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon icon" href="img/icon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Pet Owners Survey</h1>
+    </header>
+
+    <form id="survey-form">
+        <h2>Tell us about your pet!</h2>
+        <figure>
+            <img src="img/corgi.png" alt="corgi" border="0">
+        </figure>
+        <p id="description">We love our pets and never stop talking about them, and we want to hear all about your pets
+            too. Please complete this form.</p>
+        <div id="formName">
+            <div class="questions">
+                <label for="name" id="name-label"> *Name:</label>
+            </div>
+            <div class="rightSide">
+                <input id="name" type="text" name="name" class="inputs" placeholder="enter your Name" required>
+            </div>
+        </div>
+        <div id="formEmail">
+            <div class="questions">
+                <label for="email" id="email-label">*Email:</label>
+            </div>
+            <div class="rightSide">
+                <input id="email" type="email" name="email" class="inputs" placeholder="email@example.com" required>
+            </div>
+        </div>
+        <div id=formAge>
+            <div class="questions">
+                <label for="number" id="number-label">*Age:</label>
+            </div>
+            <div class="rightSide">
+                <input id="number" type="number" name="age" class="inputs" Placeholder="age" min="1" max="100" required>
+            </div>
+        </div>
+        <div id="dropText">
+            <div class="questions">
+                <label for="pet">What type of pet do you currently have?</label>
+            </div>
+            <div class="rightSide">
+                <select id="dropdown" class="inputs" name="pet">
+                    <option disabled selected value>Select an option</option>
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                    <option value="fish">Fish</option>
+                    <option value="rabbit">Rabbit</option>
+                    <option value="hamster/guinea Pig/gerbil">Hamster/Guinea Pig/Gerbil</option>
+                    <option value="reptile/amphibian">Reptile/Amphibian</option>
+                    <option value="farm animals">Farm animals</option>
+                </select>
+            </div>
+        </div>
+        <div id="radioText">
+            <div class="questions">
+                <label for="yearsExp">For how many years have you been a pet owner?</label>
+            </div>
+            <div class="rightSide">
+                <ul>
+                    <li class="radio"> <label><input name="radio-buttons" value="1" type="radio" class="yearsExp">0-5
+                            years</label></li>
+                    <li class="radio"> <label><input name="radio-buttons" value="2" type="radio" class="yearsExp">6-10
+                            years</label> </li>
+                    <li class="radio"> <label><input name="radio-buttons" value="3" type="radio" class="yearsExp">11 –
+                            15 years</label> </li>
+                    <li class="radio"> <label><input name="radio-buttons" value="3" type="radio" class="yearsExp">16 or
+                            more years</label> </li>
+                </ul>
+            </div>
+        </div>
+        <div id="checkText">
+            <div class="questions">
+                <label for="ownerAge">At what age did you first become a pet owner?</label>
+            </div>
+            <div class="rightSide">
+                <ul>
+                    <li class="checkbox"><label><input name="youngChild" value="1" type="checkbox">As a young
+                            child</label></li>
+                    <li class="checkbox"><label><input name="teenager" value="2" type="checkbox">As a teenager</label>
+                    </li>
+                    <li class="checkbox"><label><input name="college" value="3" type="checkbox">While in college</label>
+                    </li>
+                    <li class="checkbox"><label><input name="ounChildren" value="4" type="checkbox">Once I had
+                            children</label></li>
+                    <li class="checkbox"><label><input name="leftHome" value="5" type="checkbox">Once my children left
+                            home</label></li>
+                    <li class="checkbox"><label><input name="other" value="5" type="checkbox">Other</label></li>
+                </ul>
+            </div>
+        </div>
+        <div id="dropText">
+            <div class="questions">
+                <label for="sleepPlace">Where does your pet sleep?</label>
+            </div>
+            <div class="rightSide">
+                <select id="dropdown" class="inputs" name="sleepPlace">
+                    <option disabled selected value>Select an option</option>
+                    <option value="outside">Outside</option>
+                    <option value="cage">In a cage</option>
+                    <option value="bed">In your bed</option>
+                    <option value="ownbed">In his/her own bed</option>
+                    <option value="floor">On the floor</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div id="textArea">
+            <div class="questions">
+                <label for="tellMore">Tell more about your pet!</label>
+            </div>
+            <div class="rightSide">
+                <textarea id="tellMore" class="input-field" name="tellMore"
+                    placeholder="Tell more about your pet here..."></textarea>
+            </div>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+    </form>
+    <footer>
+        <div class="contact-links">
+            <a href="https://github.com/DariaCode/survey-form" target="_blank" rel="noopener"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.freecodecamp.org/dariacode" target="_blank" rel="noopener"><i
+                    class="fab fa-free-code-camp"></i></a>
+        </div>
+        <h1 id="footer">© 2019&nbsp;Daria Vodzinskaia</h1>
+    </footer>
+</body>
+
+</html>

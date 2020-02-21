@@ -1,0 +1,186 @@
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev/ tribute page
+
+Updated: 02/05/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body,
+footer,
+#main {
+  background: linear-gradient(0deg, black, black, rgb(30, 1, 33), black, black);
+  color: rgb(255, 245, 217);
+  text-align: justify;
+  font-family: fantasy;
+}
+
+h2 {
+  color: rgba(245, 188, 19, 0.77);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 0.7em;
+  text-shadow: 1px 0.5px rgba(209, 14, 154, 0.99);
+}
+
+#imgtitle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 25%;
+  max-width: 70%;
+}
+
+#image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 25%;
+  max-width: 35%;
+  //margin-top: -20%;
+}
+
+#imgfooter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  min-width: 20%;
+  max-width: 40%;
+
+}
+
+nav {
+  background: black;
+  width: 100%;
+  margin: 20px 0;
+  border: 2px solid rgba(245, 188, 19, 0.37);
+
+  button {
+    color: rgba(245, 188, 19, 0.77);
+
+    span {
+      padding: 5px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .show {
+    padding-left: 1.5em;
+  }
+
+  ul {
+    list-style-type: none;
+    // margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+    background-color: black;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+
+    li {
+      padding: 0px 15px;
+
+      a {
+        display: block;
+        color: rgba(245, 188, 19, 0.77);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+
+        &:hover {
+          color: white;
+          animation: none;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #fff, 0 0 15px #fff, 0 0 10px #e60073, 0 0 15px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 15px #ff4da6, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+  }
+}
+
+#main {
+  padding: 50px;
+  //max-width: 1200px;
+  margin: auto;
+}
+
+#spellDisplay {
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.button-spell {
+  background-color: rgb(30, 1, 33);
+  border-color: rgba(245, 188, 19, 0.77);
+  color: rgba(245, 188, 19, 0.77);
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  margin: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 22px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+footer {
+  background: black;
+  padding: 2em;
+  text-align: center;
+
+  a {
+    color: rgba(245, 188, 19, 0.77);
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+      animation: glow 1s ease-in-out infinite alternate;
+    }
+  }
+
+  .footer {
+    padding: 0.7em 0;
+    margin: 0;
+  }
+
+  i {
+    font-size: 2em;
+    padding: 3em 0.7em 1em 0.7em;
+  }
+}

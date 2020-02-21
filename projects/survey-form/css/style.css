@@ -1,0 +1,193 @@
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev/survey form
+
+Updated: 02/14/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+
+body {
+  font-family: 'Amatic SC', cursive;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  min-width: 320px;
+  background: white url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 60%;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  margin: auto;
+}
+
+h1 {
+  color: rgba(141, 215, 207, 0.99);
+  font-size: 300%;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+h2 {
+  font-size: 190%;
+}
+
+figure {
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+img {
+  max-width: 40%;
+  min-width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -15%;
+  margin-bottom: -15%;
+  width: 100%;
+}
+
+.questions {
+  display: inline-block;
+  text-align: right;
+  width: 45%;
+  padding: 0%;
+  vertical-align: top;
+}
+
+.rightSide {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+input,
+textarea {
+  height: 18px;
+  width: 85%;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 2%;
+  border: 1px solid rgba(192, 192, 192, 0.69);
+  border-radius: 8px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 70%;
+  font-weight: bold;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus {
+  outline: none;
+}
+
+#dropdown {
+  height: 30px;
+  width: 90%;
+  padding: 5px;
+  margin: 15px;
+  margin-top: 5px;
+  border: 1px solid rgba(192, 192, 192, 0.69);
+  border-radius: 8px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 70%;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.yearsExp,
+input[type="checkbox"] {
+  float: left;
+  width: 8%;
+}
+
+#submit {
+  background-color: rgba(141, 215, 207, 0.99);
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  color: black;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+  font-size: 1em;
+  height: 45px;
+  width: 150px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 833px) {
+  input {
+    width: 80%;
+  }
+
+  select {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .questions {
+    width: 100%;
+    text-align: left;
+  }
+
+  .rightSide {
+    width: 80%;
+    float: left;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+footer {
+  padding: 1em;
+}
+
+#footer {
+  font-size: 2em;
+  margin: 0.5em 0 0 0;
+}
+
+.contact-links a {
+  padding: 1em;
+  font-size: 1.5em;
+  color: rgba(141, 215, 207, 1);
+}
+
+.contact-links a:hover {
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}

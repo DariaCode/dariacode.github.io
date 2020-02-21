@@ -1,0 +1,176 @@
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+body,
+html {
+    min-height: 100%
+}
+
+body {
+    background: -webkit-gradient(linear, left top, left bottom, from(#c6fee1), to(#e0fced));
+    background: linear-gradient(180deg, #c6fee1, #e0fced);
+    font-family: Open Sans;
+    font-size: 16px;
+    padding: 15%
+}
+
+.calculator {
+    background: linear-gradient(135deg, #39beb9, #00837b);
+    width: 300px;
+    box-shadow: 0 10px 28px #00837b;
+    margin: 30px auto;
+    border-radius: 15px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%)
+}
+
+#display {
+    background: #f6f7f6;
+    text-align: right;
+    padding: 15px 28px;
+    height: 20%;
+    color: #4c455a;
+    font-size: 29px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 3px #00837b;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 4px
+}
+
+#display #formula {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2
+}
+
+#display #currentValue {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3
+}
+
+.buttons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (1fr)[5];
+    grid-template-rows: repeat(5, 1fr)
+}
+
+.buttons #clear {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: 1/1/2/span 3;
+    background: #39beb9
+}
+
+.buttons #clear:hover {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+.buttons #clear:active {
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 150px
+}
+
+.buttons #zero {
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 5/1/6/span 2
+}
+
+.buttons #add,
+.buttons #divide,
+.buttons #equals,
+.buttons #subtract {
+    background: rgba(0, 0, 0, .15);
+    font-size: 150%
+}
+
+.buttons #add:hover,
+.buttons #divide:hover,
+.buttons #equals:hover,
+.buttons #subtract:hover {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+.buttons #add:active,
+.buttons #divide:active,
+.buttons #equals:active,
+.buttons #subtract:active {
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 150px
+}
+
+.buttons #multiply {
+    background: rgba(0, 0, 0, .15);
+    font-size: 100%
+}
+
+.buttons #multiply:hover {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+.buttons #multiply:active {
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 150px
+}
+
+button {
+    float: right;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 120%;
+    padding: 15px 10px;
+    outline: none;
+    text-shadow: 0 4px 3px rgba(0, 0, 0, .144)
+}
+
+button:hover {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+button:active {
+    background: hsla(0, 0%, 100%, .2);
+    border-radius: 150px
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding: 10px
+}
+
+footer i {
+    padding: 0 15px 10px;
+    font-size: 1.2em;
+    color: #000
+}
+
+footer i:hover {
+    color: #00837b
+}
+
+/*# sourceMappingURL=main.07a07168.chunk.css.map */

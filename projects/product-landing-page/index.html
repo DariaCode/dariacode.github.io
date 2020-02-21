@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Landing Page</title>
+    <meta name="Description" content="Author: Daria Vodzinskaia,personal website">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon icon" href="img/icon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <a id="logo">D<img id="header-img" src="img/logo.jpg" alt="logo" border="0">nuts</a>
+            <div id="navbar-right">
+                <a class="nav-link" href="#why">Why?</a>
+                <a class="nav-link" href="#how">How?</a>
+                <a class="nav-link" href="#order">Order</a>
+                <a class="nav-link" href="#contact">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    <section class="secOne">
+        <h1 id="secOne-text">Donuts</h1>
+    </section>
+    <section class="secTwo" id="why">
+        <h2>Why do you need to order donuts?</h2>
+        <img src="img/before-after.jpg" alt="image" border="0">
+    </section>
+    <section class="secThree" id="how">
+        <h2>How does it work?</h2>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/PFGLldzUEqw" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    <section class="secFour" id="order">
+        <h2><img id="donutRun" src="img/order.gif" alt="2" border="0">rder
+            Online</h2>
+        <div class="orders">
+            <div class="card">
+                <h1>Dozen</h1>
+                <img id="boxOne"
+                    src="img/dozen.png"
+                    border="0" />
+                <p class="price">$10.99</p>
+                <p>1 Box of Special Donuts</p>
+                <p><button>Order</button></p>
+            </div>
+            <div class="card">
+                <h1>Triple</h1>
+                <img id="boxTwo"
+                        src="img/triple.png"
+                        border="0" />
+                <p class="price">$24.99</p>
+                <p>3 Boxes of Special Donuts</p>
+                <p><button>Order</button></p>
+            </div>
+            <div class="card">
+                <h1>Party</h1>
+                <img src="img/party.png" alt="5d" border="0">
+                <p class="price">$34.99</p>
+                <p>5 Boxes of Special Donuts</p>
+                <p><button>Order</button></p>
+            </div>
+        </div>
+    </section>
+    <section class="secFive" id="contact">
+        <h2>Would you like huge donuts with crazy toppings?
+            <ul>
+                <li><a>Gummy worms</a></li>
+                <li><a>Churro chunks</a></li>
+                <li><a>or</a></li>
+                <li><a>Russian nesting donut</a></li>
+            </ul>
+            <h2>Contuct Us</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <label for="name" id="name-label"> Name:</label>
+                <input id="name" type="text" name="name" class="inputs" placeholder="enter your Name" required> <br>
+                <label for="email" id="email-label">Email:</label>
+                <input id="email" type="email" name="email" class="inputs" placeholder="email@example.com" required>
+                <br>
+                <input id="submit" type="submit" value="Submit" class="btn" />
+            </form>
+        </h2>
+    </section>
+    <footer>
+        <div class="contact-links">
+            <a href="https://github.com/DariaCode/product-landing-page/" target="_blank" rel="noopener"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.freecodecamp.org/dariacode" target="_blank" rel="noopener"><i
+                    class="fab fa-free-code-camp"></i></a>
+        </div>
+        <h1 id="footer">© 2019&nbsp;Daria Vodzinskaia</h1>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
