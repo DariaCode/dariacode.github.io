@@ -1,3 +1,9 @@
+/* ----------------------------------------------------
+NaMe: Tribute page
+Updated: 02/05/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
 
 let spells = [
   'Aberto:<br> unlocks a door; <br> first seen in Fantastic Beasts (the movie)',

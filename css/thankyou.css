@@ -1,0 +1,68 @@
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev / thankyou
+
+Updated: 02/24/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+html {
+    background: radial-gradient(#34143F 0%, #010A1F 100%);
+    font-family: 'Fira Mono', monospace;
+    font-size: 16px;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    text-align: center
+}
+
+/* Button */
+
+.button {
+    font-family: 'Fira Mono', monospace;
+    font-size: 1em;
+    width: 10em;
+    height: 2.5em;
+    padding: 2px 0;
+    border: 3px outset #34143F;
+    border-radius: 3px 3px 3px 3px;
+    text-decoration: none;
+    position: relative;
+    z-index: 101;
+    text-align: center;
+}
+
+.button:hover {
+    background: #AE87CC;
+    box-shadow: -25px 10px 20px -8px rgba(0, 0, 0, 0.65);
+}
+
+.button:focus {
+    outline: 0;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+footer i {
+    padding: 0 15px 10px;
+    font-size: 1.2em;
+    color: white;
+}
+
+footer i:hover {
+    color: #AE87CC;
+}

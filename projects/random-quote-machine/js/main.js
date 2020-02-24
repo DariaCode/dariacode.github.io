@@ -1,4 +1,9 @@
-
+/* ----------------------------------------------------
+Name: Random quote machine
+Updated: 02/18/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
 
 var currentQuote = '';
 var currentAuthor = '';

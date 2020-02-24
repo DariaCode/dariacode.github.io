@@ -1,0 +1,54 @@
+/* ----------------------------------------------------
+Stylesheet for www.dariacode.dev/ request header parser microservice
+
+Updated: 02/21/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+html,
+body {
+    text-align: center;
+    font-family: 'IM Fell Great Primer', serif;
+}
+
+.wrapper {
+    border: 8px solid #48C2DB;
+    margin: 2%;
+    padding: 2%;
+}
+
+h1 {
+    font-size: 2em;
+    padding-top: 0.3em;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+#footer {
+    margin: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer i {
+    padding: 0 15px;
+    font-size: 1.2em;
+    color: #000;
+}
+
+footer i:hover,
+footer a:hover {
+    color: #48C2DB;
+}

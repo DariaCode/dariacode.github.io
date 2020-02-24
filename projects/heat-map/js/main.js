@@ -1,3 +1,10 @@
+/* ----------------------------------------------------
+Name: Heat Map
+Updated: 02/20/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+
 d3.json("https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/global-temperature.json", createMap);
 
 function createMap(data) {

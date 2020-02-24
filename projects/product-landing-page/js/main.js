@@ -1,3 +1,9 @@
+/* ----------------------------------------------------
+Name: Product landing page
+Updated: 02/14/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

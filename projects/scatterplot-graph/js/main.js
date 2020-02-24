@@ -1,3 +1,10 @@
+/* ----------------------------------------------------
+Name: Scatterplot graph
+Updated: 02/20/2020
+Author: Daria Vodzinskaia
+Website: www.dariacode.dev
+-------------------------------------------------------  */
+
 /* 	Sends http request to the specified url to load .json file or data and 
 executes callback function with parsed json data objects. */
 

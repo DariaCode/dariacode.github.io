@@ -123,13 +123,67 @@
 
             <div class="project">
                 <div class="card">
+                    <img class="file-metadata-microservice project-img small" src="img/file-metadata-microservice.jpg"
+                        alt="image">
+                    <div class="middle">
+                        <p>Exercise Tracker</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="exercise-tracker project-img small" src="img/exercise-tracker.jpg" alt="image">
+                    <div class="middle">
+                        <p>Exercise Tracker</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="url-shortener-microservice project-img small" src="img/url-shortener-microservice.jpg"
+                        alt="image">
+                    <div class="middle">
+                        <p>URL Shortener Microservice</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="request-header-parser-microservice project-img small"
+                        src="img/request-header-parser-microservice.jpg" alt="image">
+                    <div class="middle">
+                        <p>Request Header Parser Microservice</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="timestamp-microservice project-img small" src="img/timestamp-microservice.jpg"
+                        alt="image">
+                    <div class="middle">
+                        <p>Timestamp Microservice</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--      <div class="project">
+                <div class="card">
                     <img class="treemap-diagram project-img small" src="img/choropleth-map.jpg" alt="image">
                     <div class="middle">
                         <p>Treemap Diagram</p>
                         <button class="button openmodal" id="myBtn">View</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="project">
                 <div class="card">
@@ -266,10 +320,111 @@
     </section>
     <img class="bg" src="img/brg3.png" alt="background">
 
-    <!-- The Modal for Treemap Diagram-->
+    <!-- The Modal for File Metadata Microservice-->
     <div id="myModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>File Metadata Microservice</h1>
+            </div>
+            <img class="file-metadata-microservice project-img big" src="img/file-metadata-microservice.jpg" alt="image">
+            <p>A microservice that responds with the file name, file type, and file size metadata of any file uploaded
+                to it. (Node.js)</p>
+            <div class="modal-links">
+                <a href="./projects/file-metadata-microservice/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/file-metadata-microservice" target="_blank"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Exercise Tracker-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Exercise Tracker</h1>
+            </div>
+            <img class="exercise-tracker project-img big" src="img/exercise-tracker.jpg" alt="image">
+            <p>A simple exercise-tracker web app. (MongoDB and Node.js)</p>
+            <div class="modal-links">
+                <a href="./projects/exercise-tracker/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/exercise-tracker" target="_blank"><button class="button"><i
+                            class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for URL Shortener Microservice-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>URL Shortener Microservice</h1>
+            </div>
+            <img class="url-shortener-microservice project-img big" src="img/url-shortener-microservice.jpg"
+                alt="image">
+            <p>A microservice that generates short URLs for any valid website submitted by users. The short URLs can
+                then be used to access the original website. (MongoDB and Node.js)</p>
+            <div class="modal-links">
+                <a href="./projects/url-shortener-microservice/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/url-shortener-microservice" target="_blank"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Request Header Parser Microservice-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Request Header Parser Microservice</h1>
+            </div>
+            <img class="request-header-parser-microservice project-img big"
+                src="img/request-header-parser-microservice.jpg" alt="image">
+            <p>This API will respond with a JSON object containing the user’s IP address, preferred language, and
+                information about their browser and operating system. (Node.js)</p>
+            <div class="modal-links">
+                <a href="./projects/request-header-parser-microservice/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/request-header-parser-microservice" target="_blank"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Timestamp Microservice-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Timestamp Microservice</h1>
+            </div>
+            <img class="timestamp-microservice project-img big" src="img/timestamp-microservice.jpg" alt="image">
+            <p>This simple microservice responds with the Unix and UTC timestamp for any valid time (milliseconds or
+                YYYY-MM-DD) sent to it. (Node.js)</p>
+            <div class="modal-links">
+                <a href="./projects/timestamp-microservice/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/timestamp-microservice" target="_blank"><button class="button"><i
+                            class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Treemap Diagram-->
+    <!-- <div id="myModal" class="modal"> -->
+    <!-- Modal content -->
+    <!--    <div class="modal-content">
             <div class="top-modal">
                 <span class="close">&times;</span>
                 <h1>Treemap Diagram</h1>
@@ -284,7 +439,7 @@
                             class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- The Modal for Choropleth Map-->
     <div id="myModal" class="modal">
