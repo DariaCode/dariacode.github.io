@@ -6,6 +6,7 @@
     <meta name="Description" content="Author: Daria Vodzinskaia,personal website">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon icon" href="img/icon.ico">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="css/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
@@ -27,10 +28,11 @@
             <a class="nav-item" href="#contacts-section"><i class="far fa-envelope"></i><span>Contact</span></a>
         </div>
         <div id="nav-links">
-            <a href="https://github.com/dariacode" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank"><i
+            <a href="https://github.com/dariacode" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank" rel="noopener"><i
                     class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.freecodecamp.org/dariacode" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+            <a href="https://www.freecodecamp.org/dariacode" target="_blank" rel="noopener"><i
+                    class="fab fa-free-code-camp"></i></a>
         </div>
     </nav>
 
@@ -83,12 +85,12 @@
         <div class="about-section-background">
             <div id="about-first">
                 <div class="photo">
-                    <img src="img/photo.JPG" alt="photo">
+                    <img src="img/photo.jpg" alt="photo">
                 </div>
             </div>
             <div id="about-second">
                 <div class="title">About me</div>
-                <p>Hey! My name is Daria and I'm a web developer with a passion for front end development.
+                <p>Hey! My name is Daria and I'm a web developer with a passion for frontend development.
                     I aspire toward a career that will allow me to channel my creativity through
                     crafting beautiful software and engaging experiences.
                 </p>
@@ -99,16 +101,20 @@
                 <p>Skills:</p>
                 <ul>
                     <li>HTML & (S)CSS</li>
-                    <li>D3</li>
-                    <li>JavaScript (ES6)</li>
+                    <li>D3.js</li>
+                    <li>Bootstrap</li>
                     <li>MongoDB</li>
-                    <li>React</li>
-                    <li>Git & Github</li>
-                    <li>Node</li>
+                    <li>JavaScript (ES6)</li>
+                    <li>Git</li>
+                    <li>jQuery</li>
                     <li>Chrome DevTools</li>
+                    <li>React.js</li>
+                    <li>Responsive design</li>
+                    <li>Node.js</li>
+                    <li>Problem-solving</li>
                 </ul>
                 <div class="btn-container">
-                    <button class="button cv">View My Resume <div class="shadow"></div></button>
+                    <a href="./resume.pdf" target="_blank"><button class="button">View My Resume</button></a>
                 </div>
             </div>
         </div>
@@ -120,6 +126,137 @@
         <div class="title">Projects</div>
 
         <div class="projects">
+
+            <div class="project">
+                <div class="card">
+                    <img class="product-landing-page project-img small" src="img/product-landing-page.jpg" alt="image">
+                    <div class="middle">
+                        <p>Product Landing Page</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="survey-form project-img small" src="img/survey-form.jpg" alt="image">
+                    <div class="middle">
+                        <p>Survey Form</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="tribute-page project-img small" src="img/tribute-page.jpg" alt="image">
+                    <div class="middle">
+                        <p>Tribute Page</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="random-quote-machine project-img small" src="img/random-quote-machine.jpg" alt="image">
+                    <div class="middle">
+                        <p>Random Quote Machine</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="tech-documentation-page project-img small" src="img/tech-documentation-page.jpg"
+                        alt="image">
+                    <div class="middle">
+                        <p>Technical Documentation Page</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="drum-machine project-img small" src="img/drum-machine.jpg" alt="image">
+                    <div class="middle">
+                        <p>Drum Machine</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="markdown-previewer project-img small" src="img/markdown-previewer.jpg" alt="image">
+                    <div class="middle">
+                        <p>Markdown Previewer</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="pomodoro-clock project-img small" src="img/pomodoro-clock.jpg" alt="image">
+                    <div class="middle">
+                        <p>Pomodoro Clock</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="calculator project-img small" src="img/calculator.jpg" alt="image">
+                    <div class="middle">
+                        <p>Calculator</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="choropleth-map project-img small" src="img/choropleth-map.jpg" alt="image">
+                    <div class="middle">
+                        <p>Choropleth Map</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="heat-map project-img small" src="img/heat-map.jpg" alt="image">
+                    <div class="middle">
+                        <p>Heat Map</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="scatterplot-graph project-img small" src="img/scatterplot-graph.jpg" alt="image">
+                    <div class="middle">
+                        <p>Scatterplot Graph</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="card">
+                    <img class="bar-chart project-img small" src="img/bar-chart.jpg" alt="image">
+                    <div class="middle">
+                        <p>Bar Chart</p>
+                        <button class="button openmodal" id="myBtn">View</button>
+                    </div>
+                </div>
+            </div>
 
             <div class="project">
                 <div class="card">
@@ -185,140 +322,264 @@
                 </div>
             </div> -->
 
-            <div class="project">
-                <div class="card">
-                    <img class="choropleth-map project-img small" src="img/choropleth-map.jpg" alt="image">
-                    <div class="middle">
-                        <p>Choropleth Map</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="heat-map project-img small" src="img/heat-map.jpg" alt="image">
-                    <div class="middle">
-                        <p>Heat Map</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="scatterplot-graph project-img small" src="img/scatterplot-graph.jpg" alt="image">
-                    <div class="middle">
-                        <p>Scatterplot Graph</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="bar-chart project-img small" src="img/bar-chart.jpg" alt="image">
-                    <div class="middle">
-                        <p>Bar Chart</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="pomodoro-clock project-img small" src="img/pomodoro-clock.jpg" alt="image">
-                    <div class="middle">
-                        <p>Pomodoro Clock</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="calculator project-img small" src="img/calculator.jpg" alt="image">
-                    <div class="middle">
-                        <p>Calculator</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="drum-machine project-img small" src="img/drum-machine.jpg" alt="image">
-                    <div class="middle">
-                        <p>Drum Machine</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="markdown-previewer project-img small" src="img/markdown-previewer.jpg" alt="image">
-                    <div class="middle">
-                        <p>Markdown Previewer</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="random-quote-machine project-img small" src="img/random-quote-machine.jpg" alt="image">
-                    <div class="middle">
-                        <p>Random Quote Machine</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="tech-documentation-page project-img small" src="img/tech-documentation-page.jpg"
-                        alt="image">
-                    <div class="middle">
-                        <p>Technical Documentation Page</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="product-landing-page project-img small" src="img/product-landing-page.jpg" alt="image">
-                    <div class="middle">
-                        <p>Product Landing Page</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="survey-form project-img small" src="img/survey-form.jpg" alt="image">
-                    <div class="middle">
-                        <p>Survey Form</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="card">
-                    <img class="tribute-page project-img small" src="img/tribute-page.jpg" alt="image">
-                    <div class="middle">
-                        <p>Tribute Page</p>
-                        <button class="button openmodal" id="myBtn">View</button>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </section>
     <img class="bg" src="img/brg3.png" alt="background">
+
+    <!-- The Modal for Product Landing Page -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Product Landing Page</h1>
+            </div>
+            <img class="product-landing-page project-img big" src="img/product-landing-page.jpg" alt="image">
+            <p>A simple one-page website for a fake company.<br> (HTML, CSS and JavaScript)</p>
+            <div class="modal-links">
+                <a href="./projects/product-landing-page/" target="_blank"><button class="button">View Site</button></a>
+                <a href="https://github.com/DariaCode/product-landing-page" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Survey Form -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Survey Form</h1>
+            </div>
+            <img class="survey-form project-img big" src="img/survey-form.jpg" alt="image">
+            <p>This survey form is built using HTML, CSS.</p>
+            <div class="modal-links">
+                <a href="./projects/survey-form/" target="_blank"><button class="button">View Site</button></a>
+                <a href="https://github.com/DariaCode/survey-form" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Tribute Page -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Tribute Page</h1>
+            </div>
+            <img class="tribute-page project-img big" src="img/tribute-page.jpg" alt="image">
+            <p>This tribute page is a simple one-page site that was built using HTML, SCSS, Bootstrap and JavaScript.
+            </p>
+            <div class="modal-links">
+                <a href="./projects/tribute-page/" target="_blank"><button class="button">View Site</button></a>
+                <a href="https://github.com/DariaCode/tribute-page" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Random Quote Machine -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Random Quote Machine</h1>
+            </div>
+            <img class="random-quote-machine project-img big" src="img/random-quote-machine.jpg" alt="image">
+            <p>The Random Quote machine makes an AJAX(“Asynchronous JavaScript and XML”) call to a random quote
+                generator API (“Application Programming Interface”) and displays the response on the page with JQuery.
+                The user can share the quotes on Tumblr and Twitter.
+            </p>
+            <div class="modal-links">
+                <a href="./projects/random-quote-machine/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/random-quote-machine" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Technical Documentation Page -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Technical Documentation Page</h1>
+            </div>
+            <img class="tech-documentation-page project-img big" src="img/tech-documentation-page.jpg" alt="image">
+            <p>A sample documentation reference website built using pure CSS.</p>
+            <div class="modal-links">
+                <a href="./projects/tech-documentation-page/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/tech-documentation-page" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Drum Machine -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Drum Machine</h1>
+            </div>
+            <img class="drum-machine project-img big" src="img/drum-machine.jpg" alt="image">
+            <p>A drum machine plays different sounds when user either clicks on the certain button from keyboard or
+                mouse. This project was built with React.js.</p>
+            <div class="modal-links">
+                <a href="./projects/drum-machine/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/drum-machine" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Markdown Previewer -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Markdown Previewer</h1>
+            </div>
+            <img class="markdown-previewer project-img big" src="img/markdown-previewer.jpg" alt="image">
+            <p>Markdown Previewer was built with React.js.</p>
+            <div class="modal-links">
+                <a href="./projects/markdown-previewer/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/markdown-previewer" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Pomodoro Clock-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Pomodoro Clock</h1>
+            </div>
+            <img class="pomodoro-clock project-img big" src="img/pomodoro-clock.jpg" alt="image">
+            <p>This project was built with React.js.</p>
+            <div class="modal-links">
+                <a href="./projects/pomodoro-clock/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/pomodoro-clock" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Calculator -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Calculator</h1>
+            </div>
+            <img class="calculator project-img big" src="img/calculator.jpg" alt="image">
+            <p>This calculator was built with React.js.</p>
+            <div class="modal-links">
+                <a href="./projects/calculator/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/calculator" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Choropleth Map-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Choropleth Map</h1>
+            </div>
+            <img class="choropleth-map project-img big" src="img/choropleth-map.jpg" alt="image">
+            <p>An interactive map of higher education rates per USA county. HTML, JavaScript, CSS, and
+                the D3 svg-based visualization library were used for this project.</p>
+            <div class="modal-links">
+                <a href="./projects/choropleth-map/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/choropleth-map" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Heat Map-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Heat Map</h1>
+            </div>
+            <img class="heat-map project-img big" src="img/heat-map.jpg" alt="image">
+            <p>An interactive visualization of global land-surface temperatures since 1753. HTML, JavaScript, CSS, and
+                the D3 svg-based
+                visualization library were used for this project.</p>
+            <div class="modal-links">
+                <a href="./projects/heat-map/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/heat-map" target="_blank" rel="noopener"><button class="button"><i
+                            class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Scatterplot Graph-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Scatterplot Graph</h1>
+            </div>
+            <img class="scatterplot-graph project-img big" src="img/scatterplot-graph.jpg" alt="image">
+            <p>A graph showing doping allegations against the fastest climber’s at the Alpe d’Huez in the Tour de
+                France. HTML, JavaScript, CSS, and the D3 svg-based
+                visualization library were used for this project.</p>
+            <div class="modal-links">
+                <a href="./projects/scatterplot-graph/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/scatterplot-graph" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal for Bar Chart-->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="top-modal">
+                <span class="close">&times;</span>
+                <h1>Bar Chart</h1>
+            </div>
+            <img class="bar-chart project-img big" src="img/bar-chart.jpg" alt="image">
+            <p>A visualization of the United State’s GDP since 1947. HTML, JavaScript, CSS, and the D3 svg-based
+                visualization library were used for this project.</p>
+            <div class="modal-links">
+                <a href="./projects/bar-chart/" target="_blank"><button class="button">View
+                        Site</button></a>
+                <a href="https://github.com/DariaCode/bar-chart" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+            </div>
+        </div>
+    </div>
 
     <!-- The Modal for File Metadata Microservice-->
     <div id="myModal" class="modal">
@@ -328,13 +589,14 @@
                 <span class="close">&times;</span>
                 <h1>File Metadata Microservice</h1>
             </div>
-            <img class="file-metadata-microservice project-img big" src="img/file-metadata-microservice.jpg" alt="image">
+            <img class="file-metadata-microservice project-img big" src="img/file-metadata-microservice.jpg"
+                alt="image">
             <p>A microservice that responds with the file name, file type, and file size metadata of any file uploaded
                 to it. (Node.js)</p>
             <div class="modal-links">
                 <a href="./projects/file-metadata-microservice/" target="_blank"><button class="button">View
                         Site</button></a>
-                <a href="https://github.com/DariaCode/file-metadata-microservice" target="_blank"><button
+                <a href="https://github.com/DariaCode/file-metadata-microservice" target="_blank" rel="noopener"><button
                         class="button"><i class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
@@ -353,8 +615,8 @@
             <div class="modal-links">
                 <a href="./projects/exercise-tracker/" target="_blank"><button class="button">View
                         Site</button></a>
-                <a href="https://github.com/DariaCode/exercise-tracker" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
+                <a href="https://github.com/DariaCode/exercise-tracker" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
     </div>
@@ -374,7 +636,7 @@
             <div class="modal-links">
                 <a href="./projects/url-shortener-microservice/" target="_blank"><button class="button">View
                         Site</button></a>
-                <a href="https://github.com/DariaCode/url-shortener-microservice" target="_blank"><button
+                <a href="https://github.com/DariaCode/url-shortener-microservice" target="_blank" rel="noopener"><button
                         class="button"><i class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
@@ -395,8 +657,8 @@
             <div class="modal-links">
                 <a href="./projects/request-header-parser-microservice/" target="_blank"><button class="button">View
                         Site</button></a>
-                <a href="https://github.com/DariaCode/request-header-parser-microservice" target="_blank"><button
-                        class="button"><i class="fab fa-github"></i> View Source</button></a>
+                <a href="https://github.com/DariaCode/request-header-parser-microservice" target="_blank"
+                    rel="noopener"><button class="button"><i class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
     </div>
@@ -415,8 +677,8 @@
             <div class="modal-links">
                 <a href="./projects/timestamp-microservice/" target="_blank"><button class="button">View
                         Site</button></a>
-                <a href="https://github.com/DariaCode/timestamp-microservice" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
+                <a href="https://github.com/DariaCode/timestamp-microservice" target="_blank" rel="noopener"><button
+                        class="button"><i class="fab fa-github"></i> View Source</button></a>
             </div>
         </div>
     </div>
@@ -441,269 +703,16 @@
         </div>
     </div> -->
 
-    <!-- The Modal for Choropleth Map-->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Choropleth Map</h1>
-            </div>
-            <img class="choropleth-map project-img big" src="img/choropleth-map.jpg" alt="image">
-            <p>An interactive map of higher education rates per USA county. HTML, JavaScript, CSS, and
-                the D3 svg-based visualization library were used for this project.</p>
-            <div class="modal-links">
-                <a href="./projects/choropleth-map/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/choropleth-map" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Heat Map-->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Heat Map</h1>
-            </div>
-            <img class="heat-map project-img big" src="img/heat-map.jpg" alt="image">
-            <p>An interactive visualization of global land-surface temperatures since 1753. HTML, JavaScript, CSS, and
-                the D3 svg-based
-                visualization library were used for this project.</p>
-            <div class="modal-links">
-                <a href="./projects/heat-map/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/heat-map" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Scatterplot Graph-->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Scatterplot Graph</h1>
-            </div>
-            <img class="scatterplot-graph project-img big" src="img/scatterplot-graph.jpg" alt="image">
-            <p>A graph showing doping allegations against the fastest climber’s at the Alpe d’Huez in the Tour de
-                France. HTML, JavaScript, CSS, and the D3 svg-based
-                visualization library were used for this project.</p>
-            <div class="modal-links">
-                <a href="./projects/scatterplot-graph/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/scatterplot-graph" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Bar Chart-->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Bar Chart</h1>
-            </div>
-            <img class="bar-chart project-img big" src="img/bar-chart.jpg" alt="image">
-            <p>A visualization of the United State’s GDP since 1947. HTML, JavaScript, CSS, and the D3 svg-based
-                visualization library were used for this project.</p>
-            <div class="modal-links">
-                <a href="./projects/bar-chart/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/bar-chart" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Pomodoro Clock-->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Pomodoro Clock</h1>
-            </div>
-            <img class="pomodoro-clock project-img big" src="img/pomodoro-clock.jpg" alt="image">
-            <p>This project was built with React.</p>
-            <div class="modal-links">
-                <a href="./projects/pomodoro-clock/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/pomodoro-clock" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Calculator -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Calculator</h1>
-            </div>
-            <img class="calculator project-img big" src="img/calculator.jpg" alt="image">
-            <p>This calculator was built with React.</p>
-            <div class="modal-links">
-                <a href="./projects/calculator/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/calculator" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Drum Machine -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Drum Machine</h1>
-            </div>
-            <img class="drum-machine project-img big" src="img/drum-machine.jpg" alt="image">
-            <p>A drum machine plays different sounds when user either clicks on the certain button from keyboard or
-                mouse. This project was built with React.</p>
-            <div class="modal-links">
-                <a href="./projects/drum-machine/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/drum-machine" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Markdown Previewer -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Markdown Previewer was built with React.</h1>
-            </div>
-            <img class="markdown-previewer project-img big" src="img/markdown-previewer.jpg" alt="image">
-            <p>Markdown Previewer</p>
-            <div class="modal-links">
-                <a href="./projects/markdown-previewer/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/markdown-previewer" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Random Quote Machine -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Random Quote Machine</h1>
-            </div>
-            <img class="random-quote-machine project-img big" src="img/random-quote-machine.jpg" alt="image">
-            <p>The Random Quote machine makes an AJAX(“Asynchronous JavaScript and XML”) call to a random quote
-                generator API (“Application Programming Interface”) and displays the response on the page with JQuery.
-            </p>
-            <div class="modal-links">
-                <a href="./projects/random-quote-machine/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/trandom-quote-machine" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Technical Documentation Page -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Technical Documentation Page</h1>
-            </div>
-            <img class="tech-documentation-page project-img big" src="img/tech-documentation-page.jpg" alt="image">
-            <p>A sample documentation reference website built using pure CSS.</p>
-            <div class="modal-links">
-                <a href="./projects/tech-documentation-page/" target="_blank"><button class="button">View
-                        Site</button></a>
-                <a href="https://github.com/DariaCode/tech-documentation-page" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Product Landing Page -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Product Landing Page</h1>
-            </div>
-            <img class="product-landing-page project-img big" src="img/product-landing-page.jpg" alt="image">
-            <p>A simple one-page website for a fake company. (HTML, CSS and JavaScript)</p>
-            <div class="modal-links">
-                <a href="./projects/product-landing-page/" target="_blank"><button class="button">View Site</button></a>
-                <a href="https://github.com/DariaCode/product-landing-page" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Survey Form -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Survey Form</h1>
-            </div>
-            <img class="survey-form project-img big" src="img/survey-form.jpg" alt="image">
-            <p>This survey form is built using HTML, CSS.</p>
-            <div class="modal-links">
-                <a href="./projects/survey-form/" target="_blank"><button class="button">View Site</button></a>
-                <a href="https://github.com/DariaCode/survey-form" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Modal for Tribute Page -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="top-modal">
-                <span class="close">&times;</span>
-                <h1>Tribute Page</h1>
-            </div>
-            <img class="tribute-page project-img big" src="img/tribute-page.jpg" alt="image">
-            <p>This tribute page is a simple one-page site that was built using HTML, SCSS, Bootstrap and JavaScript.
-            </p>
-            <div class="modal-links">
-                <a href="./projects/tribute-page/" target="_blank"><button class="button">View Site</button></a>
-                <a href="https://github.com/DariaCode/tribute-page" target="_blank"><button class="button"><i
-                            class="fab fa-github"></i> View Source</button></a>
-            </div>
-        </div>
-    </div>
-
     <!-- Contacts Box -->
     <section id="contacts-section">
         <div class="title">Contact</div>
         <div class="contact-links">
-            <a href="https://github.com/dariacode" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank"><i
+            <a href="https://github.com/dariacode" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/daria-vodzinskaia-2506b918b" target="_blank" rel="noopener"><i
                     class="fab fa-linkedin-in"></i></a>
-            <a href="https://codepen.io/DariaCode" target="_blank"><i class="fab fa-codepen"></i></a>
-            <a href="https://www.freecodecamp.org/dariacode" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+            <a href="https://codepen.io/DariaCode" target="_blank"><i class="fab fa-codepen" rel="noopener"></i></a>
+            <a href="https://www.freecodecamp.org/dariacode" target="_blank"><i class="fab fa-free-code-camp"
+                    rel="noopener"></i></a>
         </div>
         <form action="/new" method="POST">
             <input type="text" name="name" placeholder="Name" required="required">

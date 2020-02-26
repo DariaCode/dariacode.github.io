@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 Stylesheet for www.dariacode.dev
 
-Updated: 02/05/2020
+Updated: 02/25/2020
 Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
@@ -96,10 +96,10 @@ html {
 
 /* Background style */
 @function multiple-box-shadow ($n) {
-  $value: "#{random(3000)}px #{random(3000)}px #FFF";
+  $value: "#{random(4000)}px #{random(4000)}px #FFF";
 
   @for $i from 2 through $n {
-    $value: "#{$value} , #{random(3000)}px #{random(3000)}px #FFF";
+    $value: "#{$value} , #{random(4000)}px #{random(4000)}px #FFF";
   }
 
   @return unquote($value);
@@ -123,7 +123,7 @@ $stars-size-lg: 3px;
   &:after {
     content: " ";
     position: absolute;
-    top: 3000px;
+    top: 4000px;
     width: $stars-size-sm;
     height: $stars-size-sm;
     background: transparent;
@@ -142,7 +142,7 @@ $stars-size-lg: 3px;
   &:after {
     content: " ";
     position: absolute;
-    top: 3000px;
+    top: 4000px;
     width: $stars-size-md;
     height: $stars-size-md;
     background: transparent;
@@ -160,7 +160,7 @@ $stars-size-lg: 3px;
   &:after {
     content: " ";
     position: absolute;
-    top: 3000px;
+    top: 4000px;
     width: $stars-size-lg;
     height: $stars-size-lg;
     background: transparent;
@@ -175,7 +175,7 @@ $stars-size-lg: 3px;
   }
 
   to {
-    transform: translateY(-3000px);
+    transform: translateY(-4000px);
   }
 }
 
@@ -529,9 +529,14 @@ $icons : (('js-square', #323330, #F0DB4F),
   font-size: 1em;
   width: 10em;
   height: 2.5em;
+  margin: 2px;
   padding: 2px 0;
-  border: 3px outset $spaceColor1;
+  border: 1px outset $spaceColor1;
   border-radius: 3px 3px 3px 3px;
+  @include for-size(desktop-up) {
+    //desktops, 1200px and up
+    border: 3px outset $spaceColor1;
+  }
   text-decoration: none;
   position: relative;
   z-index: 101;
@@ -633,10 +638,12 @@ $icons : (('js-square', #323330, #F0DB4F),
         @include for-size(desktop-up) {
           //desktops, 1200px and up
           width: 28vw;
+          border: 4px outset $spaceColor1;
+          border-radius: 3px 3px 3px 3px;
         }
 
-        border: 4px outset $spaceColor1;
-        border-radius: 3px 3px 3px 3px;
+        border: 2px outset $spaceColor1;
+        border-radius: 1px 1px 1px 1px;
         box-shadow: -25px 20px 30px -8px rgba(0, 0, 0, 0.65);
       }
     }
@@ -732,6 +739,8 @@ $icons : (('js-square', #323330, #F0DB4F),
           height: auto;
           transition: .5s ease;
           backface-visibility: hidden;
+          border: 2px outset $spaceColor1;
+          border-radius: 3px 3px 3px 3px;
         }
 
         .middle {
@@ -850,15 +859,16 @@ footer {
 /* Modal content/box */
 .modal-content {
   background-color: #fefefe;
-  margin: 20% auto;
+  margin: 25% auto;
+  padding: 20px;
+  width: 80%;
 
   @include for-size(tablet-landscape-up) {
-    margin: 3% auto;
+    margin: 2% auto;
+    padding: 20px 60px;
+    width: 60%;
   }
-
-  padding: 20px;
   border: 1px solid #888;
-  width: 60%;
 
   /* Could be more or less, depending on screen size */
   .top-modal {
@@ -883,7 +893,12 @@ footer {
 
 .big {
   width: 100%;
-  padding: 1em 0.3em;
+  @include for-size(desktop-up) {
+    height: 55vh;
+  }
+  margin: 1em 0.3em;
+  border: 2px outset $spaceColor1;
+  border-radius: 3px 3px 3px 3px;
 }
 
 /* The close button */
