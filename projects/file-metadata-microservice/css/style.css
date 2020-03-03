@@ -1,7 +1,7 @@
 /* ----------------------------------------------------
 Stylesheet for www.dariacode.dev/ file metadata microservice
 
-Updated: 02/24/2020
+Updated: 03/03/2020
 Author: Daria Vodzinskaia
 Website: www.dariacode.dev
 -------------------------------------------------------  */
@@ -50,5 +50,5 @@ footer i {
 
 footer i:hover,
 footer a:hover {
-    color: #48C2DB;
+    color: #FFE2B9;
 }
